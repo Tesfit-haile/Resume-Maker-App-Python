@@ -1,0 +1,70 @@
+{% extends "base.jin" %}
+
+{% block body %}
+    <div class="container">
+        <form method="POST" action="" novalidate>
+         <fieldset class="form-group mt-2">
+             <h4 class="text-center mt-5"> Your ID</h4>
+            {{  userCvForms.hidden_tag() }}
+        <div class="row">
+                <div class="col-7">
+                        <p>
+                            {{ userCvForms.username.label(class="form-control-label") }}
+                            {{ userCvForms.username(class="form-control form-control-m") }}
+                            <span style="color:red">{{ userCvForms.username.errors[0] }}</span>
+                        </p>
+
+                        <p>
+                            {{ userCvForms.fathername.label(class="form-control-label") }}
+                            {{ userCvForms.fathername(class="form-control form-control-m")}}
+                            <span style="color:red">{{ userCvForms.fathername.errors[0] }}</span>
+                        </p>
+
+                        <p>
+                            {{ userCvForms.email.label(class="form-control-label") }}
+                            {{ userCvForms.email(class="form-control form-control-m") }}
+                            <span style="color:red">{{ userCvForms.email.errors[0] }}</span>
+                        </p>
+
+                        <p>
+                           {{ userCvForms.age.label(class="form-control-label")  }}
+                            {{ userCvForms.age(class="form-control form-control-m") }}
+                            <span style="color:red">{{ userCvForms.age.errors[0] }}</span>
+                        </p>
+
+                        <p>
+                           {{ userCvForms.city.label(class="form-control-label") }}
+                           {{ userCvForms.city(class="form-control form-control-m") }}
+                            <span style="color:red">{{ userCvForms.city.errors[0] }}</span>
+                        </p>
+
+                    <p>
+                           {{ userCvForms.description.label(class="form-control-label") }}
+                           {{ userCvForms.description(class="form-control form-control-m") }}
+                            <span style="color:red">{{ userCvForms.description.errors[0] }}</span>
+                        </p>
+
+
+
+                    <p class="form-group text-center">
+                        {{  userCvForms.submit(class="btn btn-outline-info m-auto") }}
+                    </p>
+
+                </div>{# 1st col ends here #}
+            <div class="col-1"></div>
+                    <div class="col-4">
+                        <h4 class="text-center"> Info </h4>
+                        <p class="lead text-center">
+                            adipisicing elit. Neque iure temporibus
+                            eligendi cum dolorem excepturi placeat,
+                            necessitatibus sequi quasi labore voluptate,
+                            necessitatibus sequi quasi labore voluptate
+                        </p>
+                    </div>
+                 </div>
+            <a href="/workExperience"><button type="button" class="btn btn-primary float-right m-3">Next page</button></a>
+
+             </fieldset>
+        </form>
+    </div>
+{% endblock %}
